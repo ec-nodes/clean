@@ -23,9 +23,9 @@ while [ $counter -lt $total_programs ]; do
   echo -ne "Uninstalling programs: "
   for ((i = 0; i < progress_bar_width; i++)); do
     if [ $i -lt $progress ]; then
-      echo -n "="
-    else
       echo -n ">"
+    else
+      echo -n ""
     fi
   done
   echo -ne " $percentage% \r"
