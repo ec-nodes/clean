@@ -9,4 +9,11 @@ To initiate the cleaning and reinstallation process, simply run the following co
 ```shell
 curl -s https://raw.githubusercontent.com/ec-nodes/clean/master/reinstall.sh | sudo bash
 ```
-This command will handle all the necessary steps to uninstall the old node, clean up any associated files, and prepare your system for a fresh installation. Enjoy a hassle-free node management experience!
+This command will handle all the necessary steps to uninstall the old node, clean up any associated files, and prepare your system for a fresh installation.
+
+After an optional restart, the known command is applied:
+
+``shell
+cd ~/mvp-pox-node && sudo ./etny-node-installer.sh
+
+Enjoy a hassle-free node management experience!
