@@ -1,6 +1,6 @@
 ## Node Clean-Up and Reinstallation Script
 
-With this script, you can forget about all the commands to troubleshoot various node-related errors. Everything can be wiped clean with a single command, leaving your PC just as it was before the initial installation.
+With this script, you can forget about all the commands to troubleshoot various node-related errors. Everything can be wiped clean with a single command, leaving your PC just as it was before the initial node installation.
 
 ### Usage
 
