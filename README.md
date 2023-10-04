@@ -13,7 +13,9 @@ This command will handle all the necessary steps to uninstall the old node, clea
 
 After an optional restart, the known command is applied:
 
-``shell
+
+```shell
 cd ~/mvp-pox-node && sudo ./etny-node-installer.sh
 ```
+
 Enjoy a hassle-free node management experience!
