@@ -15,7 +15,7 @@ programs_to_uninstall=("qemu-*" "vagrant-*" "libvirt-*" "ansible" "acl" "alsa-to
 
 total_programs="${#programs_to_uninstall[@]}"
 counter=0
-progress_bar_width=50
+progress_bar_width=100
 
 while [ $counter -lt $total_programs ]; do
   percentage=$((counter * 102 / total_programs))
