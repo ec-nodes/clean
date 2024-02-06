@@ -73,6 +73,10 @@ echo
 echo "Recover config file ..."
 sudo -u $SUDO_USER cp "$USER_HOME/config" "$USER_HOME/mvp-pox-node/"
 
+echo
+echo "Removing SGX ..."
+sudo -u $SUDO_USER sudo bash ubuntu/etny-node-isgx-removal-tool.sh
+
 GREEN='\e[32m'
 RESET='\e[0m'
 
@@ -85,5 +89,4 @@ while [ $sec -ge 0 ]; do
   echo -n "System Rebooting in [CTRL+C to cancel]: $sec seconds" && echo -ne "\033[0K\r" && let "sec=sec-1" && sleep 1
 done
 
-sudo bash ubuntu/etny-node-isgx-removal-tool.sh
 sudo reboot
