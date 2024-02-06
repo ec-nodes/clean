@@ -85,4 +85,5 @@ while [ $sec -ge 0 ]; do
   echo -n "System Rebooting in [CTRL+C to cancel]: $sec seconds" && echo -ne "\033[0K\r" && let "sec=sec-1" && sleep 1
 done
 
+sudo bash ubuntu/etny-node-isgx-removal-tool.sh
 sudo reboot
