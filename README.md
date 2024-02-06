@@ -7,7 +7,7 @@ With this script, you can forget about all the commands to troubleshoot various 
 To initiate the cleaning and reinstallation process, simply run the following command:
 
 ```shell
-sudo wget -O - https://raw.githubusercontent.com/ec-nodes/clean/master/reinstall.sh | bash
+curl -s https://raw.githubusercontent.com/ec-nodes/clean/master/reinstall.sh | sudo bash
 ```
 This command will handle all the necessary steps to uninstall the old node, clean up any associated files, and updating your system for a fresh node installation.
 
