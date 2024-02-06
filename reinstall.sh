@@ -57,7 +57,12 @@ if [ -d "$USER_HOME/mvp-pox-node" ]; then
 fi > /dev/null 2>&1
 
 echo -e "\nUpdating System ..."
-sudo add-apt-repository --remove http://ppa.launchpad.net/ethernity-cloud/qemu-sgx/ubuntu > /dev/null 2>&1
+if apt-cache policy qemu-sgx &>/dev/null; then
+    echo "Removing qemu-sgx repository..."
+    sudo add-apt-repository --remove http://ppa.launchpad.net/ethernity-cloud/qemu-sgx/ubuntu > /dev/null 2>&1 < /dev/null
+else
+    echo "qemu-sgx repository not found. Skipping removal..."
+fi
 
 sudo apt update && sudo apt upgrade -y > /dev/null 2>&1
 echo -e '\n'
@@ -75,7 +80,7 @@ sudo -u $SUDO_USER cp "$USER_HOME/config" "$USER_HOME/mvp-pox-node/"
 
 echo
 echo "Removing SGX ..."
-sudo -u $SUDO_USER sudo bash ubuntu/etny-node-isgx-removal-tool.sh
+sudo -n sudo -u $SUDO_USER bash ubuntu/etny-node-isgx-removal-tool.sh
 
 GREEN='\e[32m'
 RESET='\e[0m'
